@@ -1,0 +1,13 @@
+schema: "boilerplate-backend/packages/modules/test/schema/test.gql"  # Path to your GraphQL schema file
+documents:
+  - "boilerplate-backend/packages/modules/test/resolvers/Mutation.test.ts"  # Path to your GraphQL queries/mutations
+  - "boilerplate-backend/packages/modules/test/resolvers/Query.test.ts"     # Path to your GraphQL queries/mutations
+generates:
+  boilerplate-backend/packages/modules/main/generated/gql.types.generated.ts:  # Path to output the generated file for main backend
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+  boilerplate-backend/packages/modules/test/generated/module.generated.ts:  # Path to output the generated file for tests
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"

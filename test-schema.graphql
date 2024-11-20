@@ -1,0 +1,1 @@
+type Book { id: Int! title: String! author: String! ISBN: String! stock: Int! createdAt: String! } type Query { books: [Book!]! bookByTitle(title: String!): Book } type Mutation { createBook(author: String!, title: String!, ISBN: String!, stock: Int!): Book! updateBookStock(title: String!, author: String!, inc: Int!): Int! }
